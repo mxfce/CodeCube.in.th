@@ -19,9 +19,7 @@ int main()
 		{
 			int used_time = target_time - (20 * j);
 			if(used_time <= total_time)
-			{
 				cnt++;
-			}
 		}
 		printf("Case #%d: %d\n",i,cnt);
 	}

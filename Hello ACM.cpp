@@ -21,6 +21,7 @@ int main()
 			if(used_time <= total_time)
 			{
 				cnt++;
+			}
 		}
 		printf("Case #%d: %d\n",i,cnt);
 	}

@@ -22,25 +22,25 @@ int boomX(vector<vector<char> > &vec,int i ,int j)
 	vec[i][j] = 'd';
 	for(int k = 1; k <= 2; ++k)
 	{
-		if(j-k >= 0 && i-k >= 0)
+		if(j - k >= 0 && i - k >= 0)
 		{
-			sum += check(vec,i-k,j-k);
-			vec[i-k][j-k] = 'd';
+			sum += check(vec,i - k,j - k);
+			vec[i - k][j - k] = 'd';
 		}
 		if(j+k < M && i-k >= 0)
 		{
-			sum += check(vec,i-k,j+k);
-			vec[i-k][j+k] = 'd';
+			sum += check(vec,i - k,j + k);
+			vec[i - k][j + k] = 'd';
 		}
-		if(j-k >= 0 && i+k < N)
+		if(j - k >= 0 && i + k < N)
 		{
-			sum +=check(vec,i+k,j-k);
-			vec[i+k][j-k] = 'd';
+			sum += check(vec,i + k,j - k);
+			vec[i + k][j - k] = 'd';
 		}
-		if(j+k < M && i+k < N)
+		if(j + k < M && i + k < N)
 		{
-			sum +=check(vec,i+k,j+k);
-			vec[i+k][j+k] = 'd';
+			sum += check(vec,i + k,j + k);
+			vec[i + k][j + k] = 'd';
 		}
 	}
 	return sum;
@@ -53,24 +53,24 @@ int boomPlus(vector<vector<char> > &vec,int i ,int j)
 	
 	if(i > 0)
 	{
-		sum += check(vec,i-1,j);
-		vec[i-1][j] = 'd';
+		sum += check(vec,i - 1,j);
+		vec[i - 1][j] = 'd';
 	}
 	if(j >  0)
 	{
-		sum += check(vec,i,j-1);
-		vec[i][j-1] = 'd';
+		sum += check(vec,i,j - 1);
+		vec[i][j - 1] = 'd';
 	}
 	if(j < M-1)
 	{
-		sum += check(vec,i,j+1);
-		vec[i][j+1] = 'd';
+		sum += check(vec,i,j + 1);
+		vec[i][j + 1] = 'd';
 		
 	}
-	if(i < N-1)
+	if(i < N - 1)
 	{
-		sum += check(vec,i+1,j);
-		vec[i+1][j] = 'd';
+		sum += check(vec,i + 1,j);
+		vec[i + 1][j] = 'd';
 	}
 	return sum;
 }

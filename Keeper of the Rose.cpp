@@ -13,7 +13,7 @@ int main()
 	scanf("%d %d",&N,&M);
 	int cnt_flow = 0;
 	int flow_cycle[N + 1];
-	int penalty_pos[N+1];
+	int penalty_pos[N + 1];
 	for(int i = 1; i <= N; ++i)
 	{
 		int growth_cycle;
